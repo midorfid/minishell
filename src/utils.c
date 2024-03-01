@@ -130,46 +130,49 @@ char    **find_quotes(char **str, const char quotes[2]) {
     size_t  i;
     size_t  j;
     char    *leftover;
-    char    *start;
+    char    **start;
     char    **new_args;
 
     new_args = malloc(sizeof(char *));
     i = 0;
     j = 0;
-    start = NULL;
+    start = malloc(sizeof(char *) * 2);
+    start[1] = NULL;
     leftover = NULL;
     while (str[i]) {
         if (leftover != NULL) {
             str = insert_str(str, leftover, i);
             leftover = NULL;
         }
-        if (start != NULL) {
-            new_args = realloc_double_array(new_args, start);
-            printf("start:%s\n", start);
+        if (*start != NULL) {
+            new_args = realloc_double_array(new_args, *start);
+            printf("start:%s\n", *start);
             j++;
             // start = NULL;
         }
-        start = ft_strchr(str[i], quotes[0]);
-        if (start == NULL) {
+        *start = ft_strchr(str[i], quotes[0]);
+        if (*start == NULL) {
             puts("hello");
             new_args = realloc_double_array(new_args, str[i]);
             j++;
             ++i;
         }
         else {
-            if (*start + 1 != '\0' && *start + 1 == quotes[0]) {
-                i++;
-                start = NULL;
-                break ;
-            }
-            start++;
-            printf("ogstart:%s\n", start);
+            puts("Asd");
+            // if (*((*start) + 1) != '\0' && *((*(start + 1))) == quotes[0]) {
+            //     i++;
+            //     *start = NULL;
+            //     break ;
+            // }
+            puts("qweqwe");
+            *(*(start))++;
+            printf("ogstart:%s\n", *start);
             while (str[i] && leftover == NULL) {
                 puts("loop");
-                leftover = ft_str_until_chr(&start, quotes[0]);
+                leftover = ft_str_until_chr(start, quotes[0]);
                 if (leftover == NULL) {
                     i++;
-                    start = ft_strjoin(start, str[i]);
+                    *start = ft_strjoin(*start, str[i]);
                 }
             }
         }
