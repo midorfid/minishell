@@ -52,9 +52,12 @@ size_t  double_array_len(char **input) {
 // }
 
 void    free_double_array(char **src) {
-    while(*src) {
-        free(*src);
-        src++;
+    size_t  i;
+
+    i = 0;
+    while(src[i]) {
+        free(src[i]);
+        i++;
     }
     free(src);
 }
@@ -65,14 +68,13 @@ char    **realloc_double_array(char **src, char *toinsert) {
 
     i = 0;
     res = malloc(sizeof(char *) * (double_array_len(src) + 2));
-    while (*src) {
-        *res = strdup(*src);
-        src++;
-        res++;
+    while (src[i]) {
+        res[i] = strdup(src[i]);
+        i++;
     }
-    *res = malloc(sizeof(char) * strlen(toinsert) + 1);
-    *res = memcpy(*res, toinsert, strlen(toinsert) + 1);
-    free_double_array(src);
+    res[i] = strdup(toinsert);
+    res[i + 1] = NULL;
+    // free_double_array(src);
     return (res);
 }
 
@@ -86,7 +88,8 @@ void    main(int argc, char **argv) {
         printf("%s ,", *res);
         *res++;
     }
-    free_double_array(res);
+    system("leaks a.out");
+    // free_double_array(res);
 }
 
 
