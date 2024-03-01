@@ -17,7 +17,7 @@ void    multiple_actions(char **argv) {
     }
     else if (pid == 0) {
         close(pipefd[0]);
-        write(pipefd[1], argv[0], strlen[argv[0]] + 1);
+        write(pipefd[1], argv[0], strlen(argv[0]) + 1);
         close(pipefd[1]);
         exit(EXIT_SUCCESS);
     }

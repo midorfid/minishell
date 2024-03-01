@@ -3,6 +3,8 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
+int     last_exit_code =
+
 int main(int argc, char **argv) {
     size_t  i;
     char    *line;

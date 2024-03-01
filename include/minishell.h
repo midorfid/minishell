@@ -17,6 +17,6 @@ typedef struct s_cmd_builtin
 }   t_cmd_builtin;
 
 t_cmd_builtin    builtin_choice(char *argv, char *env);
-
+char    *find_quotes(const char *str, const char quotes[2]);
 
 #endif

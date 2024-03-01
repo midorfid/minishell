@@ -23,6 +23,18 @@ t_cmd_builtin    builtin_choice(char *argv, char *env) {
     return (NULL);
 }
 
+char    *quotes_check(char **input)  {
+    size_t  i;
+
+    i = 0;
+    while (input[i]) {
+        if (find_quotes(input[i], '\'') != NULL) {
+
+        }
+    }
+
+}
+
 char **parse_input(char **input) {
     
 }
