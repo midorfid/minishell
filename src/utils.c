@@ -17,18 +17,14 @@ char	*ft_str_until_chr(char **haystack, const	char quotes)
     i = 0;
 	while (haystack[i][j] != '\0')
 	{
-        printf("char:%c\n", haystack[i][j]);
         if (quotes == haystack[i][j])
 		{
             leftover = ft_strdup(*haystack + j + 1);
             substr = malloc(sizeof(char) * j + 1);
             substr = ft_memcpy(substr, *haystack, j);
             substr[j + 1] = '\0';
-            printf("subst:%s\n", substr);
             *haystack = ft_strdup(substr);
-            printf("hay:%s\n", *haystack);
-            free(substr);
-            puts("end");
+            // free(substr);
             return (leftover);
 		}
 		j++;
@@ -63,7 +59,7 @@ char    **insert_str(char **src, const char *str, size_t where_to) {
     size_t  i;
 
     i = 0;
-    new_src = malloc(sizeof(char *) * double_array_len(src + 2));
+    new_src = malloc(sizeof(char *) * (double_array_len(src) + 2));
     if (new_src == NULL)
         return(NULL);
     while (src[i] != NULL && i < where_to) {
@@ -75,11 +71,10 @@ char    **insert_str(char **src, const char *str, size_t where_to) {
     new_src[where_to] = strdup(str);
     if (new_src[where_to] == NULL)
         return((char **)free_double_array(new_src));
-    while (src[i] != NULL) {
-        new_src[i + 1] = strdup(src[i]);
-        if (new_src[i + 1] == NULL)
+    while (src[++i] != NULL) {
+        new_src[i] = strdup(src[i]);
+        if (new_src[i] == NULL)
             return((char **)free_double_array(new_src));
-        i++;
     }
     new_src[i] = NULL;
     return(new_src);
@@ -146,29 +141,23 @@ char    **find_quotes(char **str, const char quotes[2]) {
         }
         if (*start != NULL) {
             new_args = realloc_double_array(new_args, *start);
-            printf("start:%s\n", *start);
             j++;
             // start = NULL;
         }
         *start = ft_strchr(str[i], quotes[0]);
         if (*start == NULL) {
-            puts("hello");
             new_args = realloc_double_array(new_args, str[i]);
             j++;
             ++i;
         }
         else {
-            puts("Asd");
             // if (*((*start) + 1) != '\0' && *((*(start + 1))) == quotes[0]) {
             //     i++;
             //     *start = NULL;
             //     break ;
             // }
-            puts("qweqwe");
-            *(*(start))++;
-            printf("ogstart:%s\n", *start);
+            (*start)++;
             while (str[i] && leftover == NULL) {
-                puts("loop");
                 leftover = ft_str_until_chr(start, quotes[0]);
                 if (leftover == NULL) {
                     i++;
