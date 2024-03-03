@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include "../Libft/include/libft.h"
 #define PROMPT "minishell> "
+#define SINGLE  0
+#define DOUBLE  1
 
 typedef int (*t_cmd_builtin_f)(const char **argv, const char **envp);
 

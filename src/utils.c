@@ -15,11 +15,15 @@ char	*ft_str_until_chr(char **haystack, const	char quotes)
 
 	j = 0;
     i = 0;
+    leftover = NULL;
 	while (haystack[i][j] != '\0')
 	{
         if (quotes == haystack[i][j])
 		{
-            leftover = ft_strdup(*haystack + j + 1);
+            if (*(*haystack + j + 1) != '\0')
+                leftover = ft_strdup(*haystack + j + 1);
+            else
+                leftover = ft_strdup("NULL");
             substr = malloc(sizeof(char) * j + 1);
             substr = ft_memcpy(substr, *haystack, j);
             substr[j + 1] = '\0';
@@ -119,7 +123,22 @@ char    **realloc_double_array(char **src, char *toinsert) {
 
 
 
+char    *ft_strchr_multi(char *str, const char *set) {
+    size_t  i;
+    size_t  j;
 
+    i = 0;
+    while (str[i]) {
+        j = 0;
+        while (set[j]) {
+            if (str[i] == set[j])
+                return (str + i);
+            j++;
+        }
+        i++;
+    }
+    return (NULL);
+}
 
 char    **find_quotes(char **str, const char quotes[2]) {
     size_t  i;
@@ -134,8 +153,9 @@ char    **find_quotes(char **str, const char quotes[2]) {
     start = malloc(sizeof(char *) * 2);
     start[1] = NULL;
     leftover = NULL;
+    //NEED TO HANDLE UNCLOSED!!!
     while (str[i]) {
-        if (leftover != NULL) {
+        if (leftover != NULL && ft_strncmp(leftover, "NULL", 4) != 0) {
             str = insert_str(str, leftover, i);
             leftover = NULL;
         }
@@ -144,28 +164,43 @@ char    **find_quotes(char **str, const char quotes[2]) {
             j++;
             // start = NULL;
         }
-        *start = ft_strchr(str[i], quotes[0]);
+        if (leftover != NULL && ft_strncmp(leftover, "NULL", 4) == 0)
+            break;
+        *start = ft_strchr_multi(str[i], quotes);
         if (*start == NULL) {
             new_args = realloc_double_array(new_args, str[i]);
             j++;
             ++i;
         }
         else {
-            // if (*((*start) + 1) != '\0' && *((*(start + 1))) == quotes[0]) {
-            //     i++;
-            //     *start = NULL;
-            //     break ;
-            // }
-            (*start)++;
-            while (str[i] && leftover == NULL) {
-                leftover = ft_str_until_chr(start, quotes[0]);
-                if (leftover == NULL) {
-                    i++;
-                    *start = ft_strjoin(*start, str[i]);
+            if (*(*start + 1) != '\0' && (*(*start) == quotes[SINGLE] && *(*start + 1) == quotes[SINGLE]) \
+                || (*(*start) == quotes[DOUBLE] && *(*start + 1) == quotes[DOUBLE])) {
+                    leftover = ft_strdup((*start) + 2);
+                    if (leftover == NULL)
+                        i++;
+                    *start = NULL;
+                }
+            if (*start != NULL && *(*start) == quotes[SINGLE]) {
+                (*start)++;
+                while (str[i] && leftover == NULL) {
+                    leftover = ft_str_until_chr(start, quotes[SINGLE]);
+                    if (leftover == NULL) {
+                        i++;
+                        *start = ft_strjoin(*start, str[i]);
+                    }
+                }
+            }
+            else if (*start != NULL && *(*start) == quotes[DOUBLE]) {
+                (*start)++;
+                while (str[i] && leftover == NULL) {
+                    leftover = ft_str_until_chr(start, quotes[DOUBLE]);
+                    if (leftover == NULL) {
+                        i++;
+                        *start = ft_strjoin(*start, str[i]);
+                    }
                 }
             }
         }
-        // else if (str[i] == quotes[1]) {
     }
     new_args[j] = NULL;
     return (new_args);
