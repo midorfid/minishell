@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../include/libft.h"
 
 size_t ft_strnlen(char *str, size_t maxlen){
 	size_t i;

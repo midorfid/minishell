@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*alloc_fail_clr(void *temp, t_list *res, void (*del)(void *))
 {

@@ -1,4 +1,4 @@
-#include "../../include/minishell.h"
+#include "../../include/environment.h"
 
 extern char **environ;
 

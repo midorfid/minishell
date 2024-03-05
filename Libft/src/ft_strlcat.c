@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static	size_t	ifs(size_t dstsize, const char *src, char *dst, size_t	dst_len)
 {

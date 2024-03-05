@@ -33,6 +33,7 @@ unsigned long	ft_strlen(const char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t			ft_strnlen(char *str, size_t maxlen);
+size_t  		double_array_len(char **input);
 
 int				ft_atoi(const char *str);
 int				ft_isalnum(int a);
@@ -53,21 +54,26 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_calloc(size_t count, size_t size);
 void    		*ft_realloc(void *old, size_t oldsize, size_t newsize);
+void    		*free_double_array(char **src);
 
+char    		*ft_strchr_multi(char *str, const char *set);
 char			*ft_strchr(const char	*str, int s);
 char			*ft_strdup(const char *s1);
 char			*ft_strnstr(const	char *haystack, const	char *needle,
 					size_t len);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strjoin(char const *s1, char const *s2);
+char    		*ft_strjoin3(const char   *start, const char    *mid, const char *end);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
+
 char			**ft_split(char	const *str, char c);
 char			**ft_splitset(char const *s, const char *set);
+char    		**ft_dstrdup(char **src);
 
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			ft_putchar_fd(char c, int fd);

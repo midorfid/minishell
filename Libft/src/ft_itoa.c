@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static	char	*fill_array(int n, int bool_sign, char	*res, int int_count)
 {

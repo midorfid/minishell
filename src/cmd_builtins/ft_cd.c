@@ -21,10 +21,10 @@ int ft_cd(const char *input) {
         env_name = getenv(path_name);
         if (env_name == NULL)
             return (-1);
-        strcpy(res, env_name);
+        ft_strcpy(res, env_name);
     }
     else {
-        strcpy(res, input);
+        ft_strcpy(res, input);
     }
     if (chdir(res) == -1) {
         // set errno

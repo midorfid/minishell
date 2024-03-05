@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

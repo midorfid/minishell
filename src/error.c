@@ -1,6 +1,6 @@
 #include "../include/minishell.h"
 
-void    *null_exit(char *str) {
+void    *null_exit(void *str) {
     if (str == NULL) {
         perror_exit();
     }

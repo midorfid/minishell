@@ -1,5 +1,4 @@
-#include "../../include/minishell.h"
-#include <stdlib.h>
+#include "../../include/environment.h"
 
 void    ft_setenv(const char *name, const char *value, int overwrite) {
     char    *tmp;

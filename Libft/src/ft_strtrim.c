@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static	size_t	position(char const	*s1, char const	*set, size_t set_i)
 {
