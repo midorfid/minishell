@@ -1,4 +1,5 @@
 #include "../include/libft.h"
+#include <stdio.h>
 
 char    **ft_dstrdup(char **src) {
     char    **new;
@@ -9,6 +10,7 @@ char    **ft_dstrdup(char **src) {
     new = malloc(sizeof(char *) * (len + 1));
     if (new == NULL)
         return (NULL);
+    i = 0;
     while (i < len) {
         new[i] = ft_strdup(src[i]);
         if (new[i] == NULL)

@@ -16,7 +16,7 @@ void    ft_pwd();
 
 //to do
 void    ft_env();
-void    ft_export();
+int    ft_export(char **argv, char **env);
 void    ft_unset();
 
 #endif

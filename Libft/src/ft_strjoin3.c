@@ -13,9 +13,9 @@ char    *ft_strjoin3(const char   *start, const char    *mid, const char *end) {
     new = malloc(sizeof(char) * (len_start + len_mid + len_end + 1));
     if(new == NULL)
         return(NULL);
-    new = ft_strlcpy(new, start, len_start);
-    new = ft_strlcpy(new + len_start, mid, len_mid);
-    new = ft_strlcpy(new + len_start + len_mid, end, len_end);
+    ft_strcpy(new, start);
+    ft_strcpy(new + len_start, mid);
+    ft_strcpy(new + len_start + len_mid, end);
     new[len_start + len_mid + len_end] = '\0';
     return(new);
 }

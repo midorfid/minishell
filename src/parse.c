@@ -60,6 +60,7 @@ char    **find_quotes(char **str, const char quotes[2]) {
             ++i;
         }
         else {
+            //check if there is 2 quotes in a row
             if (*(*start + 1) != '\0' && (*(*start) == quotes[SINGLE] && *(*start + 1) == quotes[SINGLE]) \
                 || (*(*start) == quotes[DOUBLE] && *(*start + 1) == quotes[DOUBLE])) {
                     leftover = ft_strdup((*start) + 2);
@@ -67,6 +68,7 @@ char    **find_quotes(char **str, const char quotes[2]) {
                         i++;
                     *start = NULL;
                 }
+            //check quotes in same string, if noone loop line until found or error
             if (*start != NULL && *(*start) == quotes[SINGLE]) {
                 (*start)++;
                 while (str[i] && leftover == NULL) {
@@ -75,6 +77,8 @@ char    **find_quotes(char **str, const char quotes[2]) {
                         i++;
                         *start = ft_strjoin(*start, str[i]);
                     }
+                    if (str[i] == NULL && leftover != NULL)
+                        //error no close quote
                 }
             }
             else if (*start != NULL && *(*start) == quotes[DOUBLE]) {

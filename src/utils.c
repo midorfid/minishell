@@ -45,16 +45,16 @@ char    **insert_str(char **src, const char *str, size_t where_to) {
     if (new_src == NULL)
         return(NULL);
     while (src[i] != NULL && i < where_to) {
-        new_src[i] = strdup(src[i]);
+        new_src[i] = ft_strdup(src[i]);
         if (new_src[i] == NULL)
             return((char **)free_double_array(new_src));
         i++;
     }
-    new_src[where_to] = strdup(str);
+    new_src[where_to] = ft_strdup(str);
     if (new_src[where_to] == NULL)
         return((char **)free_double_array(new_src));
     while (src[++i] != NULL) {
-        new_src[i] = strdup(src[i]);
+        new_src[i] = ft_strdup(src[i]);
         if (new_src[i] == NULL)
             return((char **)free_double_array(new_src));
     }
@@ -71,12 +71,12 @@ char    **realloc_double_array(char **src, char *toinsert) {
     if (res == NULL)
         return(NULL);
     while (src[i]) {
-        res[i] = strdup(src[i]);
+        res[i] = ft_strdup(src[i]);
         if (res[i] == NULL)
             return(free_double_array(res));
         i++;
     }
-    res[i] = strdup(toinsert);
+    res[i] = ft_strdup(toinsert);
     if (res[i] == NULL)
         return(free_double_array(res));
     res[i + 1] = NULL;
