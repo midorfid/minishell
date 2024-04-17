@@ -28,11 +28,13 @@ char                **getenviron(void);
 void                setenviron(char **new_env);
 
 void                *null_exit(void *str);
-void                perror_exit(void);
+void                perror_exit(const char *msg, int error_code);
+void                print_error(char *program, char *function, char *error);
 
 void                toggle_signals(int bool);
 
 char                **parse_input(char *line);
 char                **insert_str(char **src, const char *str, size_t where_to);
-static char         *ft_str_until_chr(char *str, char chr);
+char                *ft_str_until_chr(char **str, char chr);
+char                **realloc_double_array(char **src, char *toinsert);
 #endif

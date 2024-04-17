@@ -1,23 +1,5 @@
 #include "../../include/minishell.h"
 
-char    **bubble_swap(char **str, size_t pos) {
-    char    *temp;
-    size_t  i;
-
-    while(str[i] && i < pos)
-        i++;
-    temp = null_exit(ft_strdup(str[i]));
-    if (str[i + 1] != NULL) {
-        str[i] = null_exit(ft_strdup(str[i + 1]));
-        str[i++] = temp;
-        return(str);
-    }
-    else
-        return(NULL);
-}
-
-
-
 char    **sort_alph(char **src) {
     size_t  i;
     size_t  j;
@@ -45,7 +27,7 @@ char    **sort_alph(char **src) {
     return (src);
 }
 
-static char *ft_str_until_chr(char *str, char chr) {
+static char *ft_str_until_char(char *str, char chr) {
     size_t  i;
     char    *ret;
 
@@ -63,42 +45,56 @@ static char *ft_str_until_chr(char *str, char chr) {
     return (NULL);    
 }
 
-char    **add_equalls(char **env) {
+char    **add_quotes(char **env) {
     size_t  i;
     size_t  len;
-    char    *after_equalls;
+    char    *after_equall;
 
     i = 0;
     len = double_array_len(env);
     while (i < len) {
-        after_equalls = ft_strchr(env[i], '=');
-        after_equalls++;
-        env[i] = null_exit(ft_strjoin3(ft_str_until_chr(env[i], '='), "\"", after_equalls));
+        after_equall = ft_strchr(env[i], '=');
+        if (after_equall == NULL)
+            return(env);
+        after_equall++;
+        env[i] = null_exit(ft_strjoin3(ft_str_until_char(env[i], '='), "\"", after_equall));
         env[i] = null_exit(ft_strjoin(env[i], "\""));
         i++;
     }
     return (env);
 }
 
-int    ft_export(char **argv, char **env) {
-    char **test;
+void    print_export(char **toprint) {
     size_t  i;
+
+    i = 0;
+    while (toprint[i] != NULL) {
+        ft_putstr_fd("declare -x ", 1);
+        ft_putendl_fd(toprint[i], 1);
+        i++;
+    }
+}
+
+int    ft_export(char **argv, char **env) {
+    char    **to_print;
+    char    **exported_env;
     
-    test = null_exit(ft_dstrdup(env));
-    test = add_equalls(test);
-    test = sort_alph(test);
+    to_print = null_exit(ft_dstrdup(env));
     if (argv[1] == NULL) {
-        i = 0;
-        while (test[i] != NULL) {
-            ft_putstr_fd("declare -x ", 1);
-            ft_putendl_fd(test[i], 1);
-            i++;
-        }
+        to_print = add_quotes(to_print);
+        to_print = sort_alph(to_print);
+        print_export(to_print);
     }
     else {
-        return(1);
+        exported_env = null_exit(ft_dstrdup(env));
+        exported_env = realloc_double_array(exported_env, argv[1]);
+        to_print = sort_alph(to_print);
+        to_print = realloc_double_array(to_print, argv[1]);
+        to_print = add_quotes(to_print);
+        print_export(to_print);
+        setenviron(exported_env);
     }
-    free_double_array(test);
+    // free_double_array(to_print);
     return(0);
 }
 

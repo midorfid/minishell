@@ -54,5 +54,7 @@ int main(int argc, char **argv) {
     //     free(line);
     // }
     ft_export(argv, getenviron());
+    ft_unset(argv, getenviron());
+    print_export(getenviron());
     return(0);
 }
