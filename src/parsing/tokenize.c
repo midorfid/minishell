@@ -1,4 +1,4 @@
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
 char    **find_quotes(char **str, const char quotes[2]) {
     size_t  i;
@@ -77,26 +77,4 @@ char    **quotes_check(char **input)  {
     new_args = find_quotes(input, quotes);
     //free_double_array(input);
     return (new_args);
-}
-
-char    **parse_input(char *line) {
-    char    **split;
-    char    **no_quotes;
-    t_cmd_builtin   *cmd;
-
-    split = ft_split(line, ' ');
-    no_quotes = quotes_check(split);
-    free_double_array(split);
-    cmd = builtin_choice(no_quotes, NULL);
-    if (cmd != NULL) {
-        while (ft_strcmp(cmd->name, *no_quotes) != 0)
-            no_quotes++;
-        no_quotes++;
-        cmd->function(no_quotes);
-    }
-    if (cmd == NULL) {
-        rl_clear_history();
-        exit(EXIT_FAILURE);
-    }
-    return(NULL);
 }

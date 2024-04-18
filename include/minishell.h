@@ -37,4 +37,6 @@ char                **parse_input(char *line);
 char                **insert_str(char **src, const char *str, size_t where_to);
 char                *ft_str_until_chr(char **str, char chr);
 char                **realloc_double_array(char **src, char *toinsert);
+size_t              child_count(const char **input);
+
 #endif

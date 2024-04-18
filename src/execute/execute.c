@@ -21,7 +21,7 @@ t_cmd_builtin    *builtin_choice(char **parsed) {
     // (void)env;
     while (i < sizeof(cmd) / sizeof(t_cmd_builtin)) {
         if (ft_strcmp(*tmp, cmd[i].name) == 0)
-            return (cmd[i]);
+            return (&cmd[i]);
         ++i;
         tmp++;
     }
@@ -112,6 +112,7 @@ int    single_cmd(char **parsed) {
 }
 
 void    execute(char **parsed) {
-    
-    single_cmd(parsed);
+    int exit_signal;
+
+    exit_signal = single_cmd(parsed);
 }
