@@ -15,10 +15,12 @@
 #define DOUBLE  1
 #define ENABLE  1
 #define DISABLE  0
+#define READ  0
+#define WRITE  1
 
-// int     last_exit_code = 0;
+int     last_exit_code = 0;
 
-t_cmd_builtin       builtin_choice(char *argv, char *env);
+t_cmd_builtin       *builtin_choice(char **argv, char **env);
 char                **find_quotes(char **str, const char quotes[2]);
 size_t              double_array_len(char **input);
 void                *free_double_array(char **src);
@@ -31,7 +33,8 @@ void                *null_exit(void *str);
 void                perror_exit(const char *msg, int error_code);
 void                print_error(char *program, char *function, char *error);
 
-void                toggle_signals(int bool);
+void                enable_signals(int bool);
+void	            disable_signals(void);
 
 char                **parse_input(char *line);
 char                **insert_str(char **src, const char *str, size_t where_to);

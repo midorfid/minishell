@@ -10,6 +10,7 @@ void            ft_unsetenv(const char *name);
 static char     **_environ(char **new_env);
 char            **getenviron(void);
 void            setenviron(char **new_env);
+char            **ft_getenviron_value();
 
 void            *null_exit(void *str);
 #endif

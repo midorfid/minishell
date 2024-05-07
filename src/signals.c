@@ -10,7 +10,7 @@ static void    sighandler(int signum) {
     last_exit_code = 1;
 }
 
-void    toggle_signals(int bool) {
+void    enable_signals(int bool) {
     if (bool) {
         signal(SIGINT, sighandler);
         signal(SIGQUIT, SIG_IGN);
@@ -19,4 +19,11 @@ void    toggle_signals(int bool) {
         signal(SIGINT, SIG_IGN);
         signal(SIGQUIT, SIG_IGN);
     }
+}
+
+void	disable_signals(void)
+{
+	rl_catch_signals = 1;
+	signal(SIGINT, SIG_DFL);
+	signal(SIGQUIT, SIG_DFL);
 }
