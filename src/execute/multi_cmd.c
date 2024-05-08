@@ -57,7 +57,7 @@ void    first_cmd(char **cmd, int **pipe_out) {
 
 }
 
-void     mid_cmd(char **cmd, int pipe_in, int *pipe_out[]) {
+void     mid_cmd(char **cmd, int pipe_in, int pipe_out[]) {
     pid_t           fork_id;
 
     fork_id = fork();
@@ -65,31 +65,42 @@ void     mid_cmd(char **cmd, int pipe_in, int *pipe_out[]) {
         perror_exit("minishell(fork)", EXIT_FAILURE);
     if (fork_id == 0) {
         if (dup2(pipe_in, STDIN_FILENO) < 0 || \
-            dup2(pipe_out[READ], STDOUT_FILENO) < 0)
+            dup2(pipe_out[WRITE], STDOUT_FILENO) < 0)
             perror_exit("minishell(pipe)", EXIT_FAILURE);
+        close(pipe_in);
+        close(pipe_out[WRITE]);
+        close(pipe_out[READ]);
         exec_multi_cmd(cmd);
     }
-    return(close_pipe_fd());
+    close(pipe_in);
+    close(pipe_out[WRITE]);
 }
 
 int multi_cmd(char **parsed) {
-    size_t  i;
-    pid_t   process_id;
-    t_childs    childs;
+    size_t              i;
+    pid_t               process_id;
+    t_childs            *childs;
+    static int          flip = 0;
 
-    childs.child_count = child_count(parsed);
+    if (parsed == NULL || parsed[0] == NULL) {
+        if (pipe(childs->pipe_fd[flip]) < 0)
+            perror_exit("minishell", EXIT_FAILURE);
+    }
+    childs->child_count = child_count(parsed);
     i = 0;
-    while (i <= childs.child_count) {
+    while (i <= childs->child_count) {
         if (i == 0)
-            process_id = first_cmd(parsed, childs.pipe_fd);
-        else if (i == childs.child_count)
-            last_cmd(parsed, process_id);
+            first_cmd(parsed, childs->pipe_fd[flip]);
+        else if (i == childs->child_count)
+            process_id = last_cmd(parsed, childs->pipe_fd[!flip]);
         else
-            mid_cmd(parsed, process_id);
+            mid_cmd(parsed, childs->pipe_fd[!flip][0], childs->pipe_fd[flip]);
+        flip = !flip;
         while (ft_strcmp(*parsed, "|") != 0)
             parsed++;
         if (ft_strcmp(*parsed, "|") == 0)
             parsed++;
         i++;
     }
+    return (process_id);
 }

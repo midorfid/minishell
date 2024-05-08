@@ -22,3 +22,25 @@ char    **getenviron(void) {
 void    setenviron(char **new_env) {
     _environ(new_env);
 }
+
+char **ft_getenviron_value() {
+    char    **ep;
+    char    **env;
+    char    **shift;
+
+    env = null_exit(ft_dstrdup(getenviron()));
+    ep = env;
+    while(*ep) {
+        if (ft_strchr_multi(*ep, "=") == NULL) {
+            free(*ep);
+            shift = ep;
+            while (*shift) {
+                *shift = *(shift + 1);
+                shift++;
+            }
+        }
+        else
+            ep++;
+    }
+    return (env);
+}
