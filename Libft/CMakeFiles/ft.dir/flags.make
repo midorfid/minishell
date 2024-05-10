@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/anton_beton/Desktop/projects/FDF/Libft/include
+C_INCLUDES = -I/home/anton_beton/Desktop/projects/minishell/Libft/include
 
-C_FLAGS = -Wall -Werror -Wextra -Ofast -O3 -g -fsanitize=address
+C_FLAGS = 
 

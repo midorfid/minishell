@@ -9,15 +9,15 @@ typedef struct s_cmd_builtin
     t_cmd_builtin_f    function;
 }   t_cmd_builtin;
 
-int     ft_cd(const char *input);
-void    ft_echo(char **argv);
-int     ft_exit();
-void    ft_pwd();
+int     ft_cd(const char **argv, const char **envp);
+int    ft_echo(const char **argv, const char **envp);
+int     ft_exit(const char **argv, const char **envp);
+int    ft_pwd(const char **argv, const char **envp);
 
 //to do
-void    ft_env();
-int    ft_export(char **argv, char **env);
-int    ft_unset(char **argv, char **env);
+int    ft_env(const char **argv, const char **envp);
+int    ft_export(const char **argv, const char **envp);
+int    ft_unset(const char **argv, const char **envp);
 
 void    print_export(char **toprint);
 char    **add_quotes(char **env);

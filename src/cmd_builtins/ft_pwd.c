@@ -1,6 +1,6 @@
 #include "../include/minishell.h"
 
-void    ft_pwd() {
+int    ft_pwd(const char **argv, const char **envp) {
     char    *abs_path;
 
     abs_path = getcwd(abs_path, 0);

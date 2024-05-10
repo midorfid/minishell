@@ -2,11 +2,12 @@
 #include <unistd.h>
 #include <string.h>
 
-int ft_cd(const char *input) {
+int ft_cd(const char **input, const char **envp) {
     char    *path;
     char    res[1024];
 
-    path = strchr(input, '$');
+    (void)envp;
+    path = strchr(*input, '$');
     if (path != NULL) {
         char    path_name[128];
         char    *env_name;
@@ -24,7 +25,7 @@ int ft_cd(const char *input) {
         ft_strcpy(res, env_name);
     }
     else {
-        ft_strcpy(res, input);
+        ft_strcpy(res, *input);
     }
     if (chdir(res) == -1) {
         // set errno

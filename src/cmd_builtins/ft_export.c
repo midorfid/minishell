@@ -75,7 +75,7 @@ void    print_export(char **toprint) {
     }
 }
 
-int    ft_export(char **argv, char **env) {
+int    ft_export(const char **argv, const char **env) {
     char    **to_print;
     char    **exported_env;
     

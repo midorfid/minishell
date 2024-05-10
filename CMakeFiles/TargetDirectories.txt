@@ -1,0 +1,6 @@
+/home/anton_beton/Desktop/projects/minishell/CMakeFiles/minishell.dir
+/home/anton_beton/Desktop/projects/minishell/CMakeFiles/edit_cache.dir
+/home/anton_beton/Desktop/projects/minishell/CMakeFiles/rebuild_cache.dir
+/home/anton_beton/Desktop/projects/minishell/Libft/CMakeFiles/ft.dir
+/home/anton_beton/Desktop/projects/minishell/Libft/CMakeFiles/edit_cache.dir
+/home/anton_beton/Desktop/projects/minishell/Libft/CMakeFiles/rebuild_cache.dir

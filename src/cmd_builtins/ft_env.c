@@ -1,7 +1,7 @@
 #include "../../include/minishell.h"
 #include "../../include/environment.h"
 
-int ft_env(char **argv, char **env) {
+int ft_env(const char **argv, const char **env) {
     size_t  i;
 
     if (double_array_len(argv) != 1) {

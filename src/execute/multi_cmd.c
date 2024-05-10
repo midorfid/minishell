@@ -15,27 +15,6 @@ static void     restore_stdinout(int *backup_fd) {
         dup2(backup_fd[STDOUT_FILENO], STDOUT_FILENO) < 0)
             perror_exit("minishell", 1);
 }
-
-void    open_pipe(char **input) {
-    pid_t   pid; 
-    int     fd[2];
-
-    if (pipe(fd) == -1) {
-        perror("pipe failed");
-        exit(EXIT_FAILURE);
-    }
-    pid = fork();
-    if (pid < 0) {
-        perror("fork failed");
-        exit(EXIT_FAILURE);
-    }
-    if (pid == 0) {
-        //child
-    }
-    else {
-        //parent
-    }
-}
 /* execve() TO LOOK UP REGARDING ARGV INPUT, MEANING POINTER TO CONST POINTER*/
 int     execute_multi_cmd(char **cmd) {
     t_cmd_builtin   *builtin_f;
@@ -53,8 +32,19 @@ int     execute_multi_cmd(char **cmd) {
         perror_exit("minishell", EXIT_FAILURE);
 }
 
-void    first_cmd(char **cmd, int **pipe_out) {
-
+void    first_cmd(char **cmd, int pipe_out[]) {
+    pid_t       fork_id;
+    
+    fork_id = fork();
+    if (fork_id < 0)
+        perror_exit("minishell(fork)", EXIT_FAILURE);
+    if (fork_id == 0) {
+        if (dup2(pipe_out[WRITE], STDOUT_FILENO) < 0)
+            perror_exit("minishell", EXIT_FAILURE);
+        close(pipe_out[WRITE]);
+        close(pipe_out[READ]);
+    }
+    close(pipe_out[WRITE]);
 }
 
 void     mid_cmd(char **cmd, int pipe_in, int pipe_out[]) {
@@ -76,10 +66,25 @@ void     mid_cmd(char **cmd, int pipe_in, int pipe_out[]) {
     close(pipe_out[WRITE]);
 }
 
-int multi_cmd(char **parsed) {
+int     last_cmd(char **cmd, int pipe_in) {
+    pid_t           fork_id;
+
+
+    fork_id = fork();
+    if (fork_id < 0)
+        perror_exit("minishell", EXIT_FAILURE);
+    if (fork_id == 0) {
+        if (dup2(pipe_in, STDIN_FILENO) < 0)
+            perror_exit("minishell", EXIT_FAILURE);
+        close(pipe_in);
+    }
+    close(pipe_in);
+    return(fork_id);
+}
+
+int multi_cmd(char **parsed, t_childs *childs) {
     size_t              i;
     pid_t               process_id;
-    t_childs            *childs;
     static int          flip = 0;
 
     if (parsed == NULL || parsed[0] == NULL) {
@@ -92,7 +97,7 @@ int multi_cmd(char **parsed) {
         if (i == 0)
             first_cmd(parsed, childs->pipe_fd[flip]);
         else if (i == childs->child_count)
-            process_id = last_cmd(parsed, childs->pipe_fd[!flip]);
+            process_id = last_cmd(parsed, childs->pipe_fd[!flip][0]);
         else
             mid_cmd(parsed, childs->pipe_fd[!flip][0], childs->pipe_fd[flip]);
         flip = !flip;

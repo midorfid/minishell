@@ -1,5 +1,6 @@
 #include "../../include/minishell.h"
 #include "../../include/builtins.h"
+#include "../../include/executor.h"
 #include <fcntl.h>
 
 t_cmd_builtin    *builtin_choice(char **parsed) {
@@ -112,7 +113,13 @@ int    single_cmd(char **parsed) {
 }
 
 void    execute(char **parsed) {
-    int exit_signal;
+    int         exit_signal;
+    t_childs    *childs;
 
-    exit_signal = single_cmd(parsed);
+    childs->child_count = child_count(parsed);
+    if (childs->child_count > 0) {
+        exit_signal = multi_cmd(parsed, childs);
+    }
+    else if (childs->child_count == 0)
+        exit_signal = single_cmd(parsed);
 }

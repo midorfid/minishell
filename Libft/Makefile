@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton_beton/Desktop/projects/FDF
+CMAKE_SOURCE_DIR = /home/anton_beton/Desktop/projects/minishell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton_beton/Desktop/projects/FDF
+CMAKE_BINARY_DIR = /home/anton_beton/Desktop/projects/minishell
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton_beton/Desktop/projects/FDF && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton_beton/Desktop/projects/FDF/CMakeFiles /home/anton_beton/Desktop/projects/FDF/Libft//CMakeFiles/progress.marks
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton_beton/Desktop/projects/FDF/CMakeFiles 0
+	cd /home/anton_beton/Desktop/projects/minishell && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton_beton/Desktop/projects/minishell/CMakeFiles /home/anton_beton/Desktop/projects/minishell/Libft//CMakeFiles/progress.marks
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton_beton/Desktop/projects/minishell/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/clean
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/preinstall
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/preinstall
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton_beton/Desktop/projects/FDF && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/anton_beton/Desktop/projects/minishell && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Libft/CMakeFiles/ft.dir/rule:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/CMakeFiles/ft.dir/rule
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Libft/CMakeFiles/ft.dir/rule
 .PHONY : Libft/CMakeFiles/ft.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ ft: Libft/CMakeFiles/ft.dir/rule
 
 # fast build rule for target.
 ft/fast:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/build
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
 src/ft_atoi.o: src/ft_atoi.c.o
@@ -135,7 +135,7 @@ src/ft_atoi.o: src/ft_atoi.c.o
 
 # target to build an object file
 src/ft_atoi.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.o
 .PHONY : src/ft_atoi.c.o
 
 src/ft_atoi.i: src/ft_atoi.c.i
@@ -143,7 +143,7 @@ src/ft_atoi.i: src/ft_atoi.c.i
 
 # target to preprocess a source file
 src/ft_atoi.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.i
 .PHONY : src/ft_atoi.c.i
 
 src/ft_atoi.s: src/ft_atoi.c.s
@@ -151,7 +151,7 @@ src/ft_atoi.s: src/ft_atoi.c.s
 
 # target to generate assembly for a file
 src/ft_atoi.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_atoi.c.s
 .PHONY : src/ft_atoi.c.s
 
 src/ft_bzero.o: src/ft_bzero.c.o
@@ -159,7 +159,7 @@ src/ft_bzero.o: src/ft_bzero.c.o
 
 # target to build an object file
 src/ft_bzero.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.o
 .PHONY : src/ft_bzero.c.o
 
 src/ft_bzero.i: src/ft_bzero.c.i
@@ -167,7 +167,7 @@ src/ft_bzero.i: src/ft_bzero.c.i
 
 # target to preprocess a source file
 src/ft_bzero.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.i
 .PHONY : src/ft_bzero.c.i
 
 src/ft_bzero.s: src/ft_bzero.c.s
@@ -175,7 +175,7 @@ src/ft_bzero.s: src/ft_bzero.c.s
 
 # target to generate assembly for a file
 src/ft_bzero.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_bzero.c.s
 .PHONY : src/ft_bzero.c.s
 
 src/ft_calloc.o: src/ft_calloc.c.o
@@ -183,7 +183,7 @@ src/ft_calloc.o: src/ft_calloc.c.o
 
 # target to build an object file
 src/ft_calloc.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.o
 .PHONY : src/ft_calloc.c.o
 
 src/ft_calloc.i: src/ft_calloc.c.i
@@ -191,7 +191,7 @@ src/ft_calloc.i: src/ft_calloc.c.i
 
 # target to preprocess a source file
 src/ft_calloc.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.i
 .PHONY : src/ft_calloc.c.i
 
 src/ft_calloc.s: src/ft_calloc.c.s
@@ -199,7 +199,7 @@ src/ft_calloc.s: src/ft_calloc.c.s
 
 # target to generate assembly for a file
 src/ft_calloc.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_calloc.c.s
 .PHONY : src/ft_calloc.c.s
 
 src/ft_isalnum.o: src/ft_isalnum.c.o
@@ -207,7 +207,7 @@ src/ft_isalnum.o: src/ft_isalnum.c.o
 
 # target to build an object file
 src/ft_isalnum.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.o
 .PHONY : src/ft_isalnum.c.o
 
 src/ft_isalnum.i: src/ft_isalnum.c.i
@@ -215,7 +215,7 @@ src/ft_isalnum.i: src/ft_isalnum.c.i
 
 # target to preprocess a source file
 src/ft_isalnum.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.i
 .PHONY : src/ft_isalnum.c.i
 
 src/ft_isalnum.s: src/ft_isalnum.c.s
@@ -223,7 +223,7 @@ src/ft_isalnum.s: src/ft_isalnum.c.s
 
 # target to generate assembly for a file
 src/ft_isalnum.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalnum.c.s
 .PHONY : src/ft_isalnum.c.s
 
 src/ft_isalpha.o: src/ft_isalpha.c.o
@@ -231,7 +231,7 @@ src/ft_isalpha.o: src/ft_isalpha.c.o
 
 # target to build an object file
 src/ft_isalpha.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.o
 .PHONY : src/ft_isalpha.c.o
 
 src/ft_isalpha.i: src/ft_isalpha.c.i
@@ -239,7 +239,7 @@ src/ft_isalpha.i: src/ft_isalpha.c.i
 
 # target to preprocess a source file
 src/ft_isalpha.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.i
 .PHONY : src/ft_isalpha.c.i
 
 src/ft_isalpha.s: src/ft_isalpha.c.s
@@ -247,7 +247,7 @@ src/ft_isalpha.s: src/ft_isalpha.c.s
 
 # target to generate assembly for a file
 src/ft_isalpha.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isalpha.c.s
 .PHONY : src/ft_isalpha.c.s
 
 src/ft_isascii.o: src/ft_isascii.c.o
@@ -255,7 +255,7 @@ src/ft_isascii.o: src/ft_isascii.c.o
 
 # target to build an object file
 src/ft_isascii.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.o
 .PHONY : src/ft_isascii.c.o
 
 src/ft_isascii.i: src/ft_isascii.c.i
@@ -263,7 +263,7 @@ src/ft_isascii.i: src/ft_isascii.c.i
 
 # target to preprocess a source file
 src/ft_isascii.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.i
 .PHONY : src/ft_isascii.c.i
 
 src/ft_isascii.s: src/ft_isascii.c.s
@@ -271,7 +271,7 @@ src/ft_isascii.s: src/ft_isascii.c.s
 
 # target to generate assembly for a file
 src/ft_isascii.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isascii.c.s
 .PHONY : src/ft_isascii.c.s
 
 src/ft_isdigit.o: src/ft_isdigit.c.o
@@ -279,7 +279,7 @@ src/ft_isdigit.o: src/ft_isdigit.c.o
 
 # target to build an object file
 src/ft_isdigit.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.o
 .PHONY : src/ft_isdigit.c.o
 
 src/ft_isdigit.i: src/ft_isdigit.c.i
@@ -287,7 +287,7 @@ src/ft_isdigit.i: src/ft_isdigit.c.i
 
 # target to preprocess a source file
 src/ft_isdigit.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.i
 .PHONY : src/ft_isdigit.c.i
 
 src/ft_isdigit.s: src/ft_isdigit.c.s
@@ -295,7 +295,7 @@ src/ft_isdigit.s: src/ft_isdigit.c.s
 
 # target to generate assembly for a file
 src/ft_isdigit.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isdigit.c.s
 .PHONY : src/ft_isdigit.c.s
 
 src/ft_islower.o: src/ft_islower.c.o
@@ -303,7 +303,7 @@ src/ft_islower.o: src/ft_islower.c.o
 
 # target to build an object file
 src/ft_islower.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.o
 .PHONY : src/ft_islower.c.o
 
 src/ft_islower.i: src/ft_islower.c.i
@@ -311,7 +311,7 @@ src/ft_islower.i: src/ft_islower.c.i
 
 # target to preprocess a source file
 src/ft_islower.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.i
 .PHONY : src/ft_islower.c.i
 
 src/ft_islower.s: src/ft_islower.c.s
@@ -319,7 +319,7 @@ src/ft_islower.s: src/ft_islower.c.s
 
 # target to generate assembly for a file
 src/ft_islower.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_islower.c.s
 .PHONY : src/ft_islower.c.s
 
 src/ft_isprint.o: src/ft_isprint.c.o
@@ -327,7 +327,7 @@ src/ft_isprint.o: src/ft_isprint.c.o
 
 # target to build an object file
 src/ft_isprint.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.o
 .PHONY : src/ft_isprint.c.o
 
 src/ft_isprint.i: src/ft_isprint.c.i
@@ -335,7 +335,7 @@ src/ft_isprint.i: src/ft_isprint.c.i
 
 # target to preprocess a source file
 src/ft_isprint.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.i
 .PHONY : src/ft_isprint.c.i
 
 src/ft_isprint.s: src/ft_isprint.c.s
@@ -343,7 +343,7 @@ src/ft_isprint.s: src/ft_isprint.c.s
 
 # target to generate assembly for a file
 src/ft_isprint.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isprint.c.s
 .PHONY : src/ft_isprint.c.s
 
 src/ft_isupper.o: src/ft_isupper.c.o
@@ -351,7 +351,7 @@ src/ft_isupper.o: src/ft_isupper.c.o
 
 # target to build an object file
 src/ft_isupper.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.o
 .PHONY : src/ft_isupper.c.o
 
 src/ft_isupper.i: src/ft_isupper.c.i
@@ -359,7 +359,7 @@ src/ft_isupper.i: src/ft_isupper.c.i
 
 # target to preprocess a source file
 src/ft_isupper.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.i
 .PHONY : src/ft_isupper.c.i
 
 src/ft_isupper.s: src/ft_isupper.c.s
@@ -367,7 +367,7 @@ src/ft_isupper.s: src/ft_isupper.c.s
 
 # target to generate assembly for a file
 src/ft_isupper.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_isupper.c.s
 .PHONY : src/ft_isupper.c.s
 
 src/ft_itoa.o: src/ft_itoa.c.o
@@ -375,7 +375,7 @@ src/ft_itoa.o: src/ft_itoa.c.o
 
 # target to build an object file
 src/ft_itoa.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.o
 .PHONY : src/ft_itoa.c.o
 
 src/ft_itoa.i: src/ft_itoa.c.i
@@ -383,7 +383,7 @@ src/ft_itoa.i: src/ft_itoa.c.i
 
 # target to preprocess a source file
 src/ft_itoa.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.i
 .PHONY : src/ft_itoa.c.i
 
 src/ft_itoa.s: src/ft_itoa.c.s
@@ -391,7 +391,7 @@ src/ft_itoa.s: src/ft_itoa.c.s
 
 # target to generate assembly for a file
 src/ft_itoa.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_itoa.c.s
 .PHONY : src/ft_itoa.c.s
 
 src/ft_lstnew.o: src/ft_lstnew.c.o
@@ -399,7 +399,7 @@ src/ft_lstnew.o: src/ft_lstnew.c.o
 
 # target to build an object file
 src/ft_lstnew.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.o
 .PHONY : src/ft_lstnew.c.o
 
 src/ft_lstnew.i: src/ft_lstnew.c.i
@@ -407,7 +407,7 @@ src/ft_lstnew.i: src/ft_lstnew.c.i
 
 # target to preprocess a source file
 src/ft_lstnew.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.i
 .PHONY : src/ft_lstnew.c.i
 
 src/ft_lstnew.s: src/ft_lstnew.c.s
@@ -415,7 +415,7 @@ src/ft_lstnew.s: src/ft_lstnew.c.s
 
 # target to generate assembly for a file
 src/ft_lstnew.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_lstnew.c.s
 .PHONY : src/ft_lstnew.c.s
 
 src/ft_memchr.o: src/ft_memchr.c.o
@@ -423,7 +423,7 @@ src/ft_memchr.o: src/ft_memchr.c.o
 
 # target to build an object file
 src/ft_memchr.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.o
 .PHONY : src/ft_memchr.c.o
 
 src/ft_memchr.i: src/ft_memchr.c.i
@@ -431,7 +431,7 @@ src/ft_memchr.i: src/ft_memchr.c.i
 
 # target to preprocess a source file
 src/ft_memchr.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.i
 .PHONY : src/ft_memchr.c.i
 
 src/ft_memchr.s: src/ft_memchr.c.s
@@ -439,7 +439,7 @@ src/ft_memchr.s: src/ft_memchr.c.s
 
 # target to generate assembly for a file
 src/ft_memchr.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memchr.c.s
 .PHONY : src/ft_memchr.c.s
 
 src/ft_memcmp.o: src/ft_memcmp.c.o
@@ -447,7 +447,7 @@ src/ft_memcmp.o: src/ft_memcmp.c.o
 
 # target to build an object file
 src/ft_memcmp.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.o
 .PHONY : src/ft_memcmp.c.o
 
 src/ft_memcmp.i: src/ft_memcmp.c.i
@@ -455,7 +455,7 @@ src/ft_memcmp.i: src/ft_memcmp.c.i
 
 # target to preprocess a source file
 src/ft_memcmp.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.i
 .PHONY : src/ft_memcmp.c.i
 
 src/ft_memcmp.s: src/ft_memcmp.c.s
@@ -463,7 +463,7 @@ src/ft_memcmp.s: src/ft_memcmp.c.s
 
 # target to generate assembly for a file
 src/ft_memcmp.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcmp.c.s
 .PHONY : src/ft_memcmp.c.s
 
 src/ft_memcpy.o: src/ft_memcpy.c.o
@@ -471,7 +471,7 @@ src/ft_memcpy.o: src/ft_memcpy.c.o
 
 # target to build an object file
 src/ft_memcpy.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.o
 .PHONY : src/ft_memcpy.c.o
 
 src/ft_memcpy.i: src/ft_memcpy.c.i
@@ -479,7 +479,7 @@ src/ft_memcpy.i: src/ft_memcpy.c.i
 
 # target to preprocess a source file
 src/ft_memcpy.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.i
 .PHONY : src/ft_memcpy.c.i
 
 src/ft_memcpy.s: src/ft_memcpy.c.s
@@ -487,7 +487,7 @@ src/ft_memcpy.s: src/ft_memcpy.c.s
 
 # target to generate assembly for a file
 src/ft_memcpy.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memcpy.c.s
 .PHONY : src/ft_memcpy.c.s
 
 src/ft_memmove.o: src/ft_memmove.c.o
@@ -495,7 +495,7 @@ src/ft_memmove.o: src/ft_memmove.c.o
 
 # target to build an object file
 src/ft_memmove.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.o
 .PHONY : src/ft_memmove.c.o
 
 src/ft_memmove.i: src/ft_memmove.c.i
@@ -503,7 +503,7 @@ src/ft_memmove.i: src/ft_memmove.c.i
 
 # target to preprocess a source file
 src/ft_memmove.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.i
 .PHONY : src/ft_memmove.c.i
 
 src/ft_memmove.s: src/ft_memmove.c.s
@@ -511,7 +511,7 @@ src/ft_memmove.s: src/ft_memmove.c.s
 
 # target to generate assembly for a file
 src/ft_memmove.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memmove.c.s
 .PHONY : src/ft_memmove.c.s
 
 src/ft_memset.o: src/ft_memset.c.o
@@ -519,7 +519,7 @@ src/ft_memset.o: src/ft_memset.c.o
 
 # target to build an object file
 src/ft_memset.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.o
 .PHONY : src/ft_memset.c.o
 
 src/ft_memset.i: src/ft_memset.c.i
@@ -527,7 +527,7 @@ src/ft_memset.i: src/ft_memset.c.i
 
 # target to preprocess a source file
 src/ft_memset.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.i
 .PHONY : src/ft_memset.c.i
 
 src/ft_memset.s: src/ft_memset.c.s
@@ -535,7 +535,7 @@ src/ft_memset.s: src/ft_memset.c.s
 
 # target to generate assembly for a file
 src/ft_memset.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_memset.c.s
 .PHONY : src/ft_memset.c.s
 
 src/ft_putchar_fd.o: src/ft_putchar_fd.c.o
@@ -543,7 +543,7 @@ src/ft_putchar_fd.o: src/ft_putchar_fd.c.o
 
 # target to build an object file
 src/ft_putchar_fd.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.o
 .PHONY : src/ft_putchar_fd.c.o
 
 src/ft_putchar_fd.i: src/ft_putchar_fd.c.i
@@ -551,7 +551,7 @@ src/ft_putchar_fd.i: src/ft_putchar_fd.c.i
 
 # target to preprocess a source file
 src/ft_putchar_fd.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.i
 .PHONY : src/ft_putchar_fd.c.i
 
 src/ft_putchar_fd.s: src/ft_putchar_fd.c.s
@@ -559,7 +559,7 @@ src/ft_putchar_fd.s: src/ft_putchar_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putchar_fd.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putchar_fd.c.s
 .PHONY : src/ft_putchar_fd.c.s
 
 src/ft_putendl_fd.o: src/ft_putendl_fd.c.o
@@ -567,7 +567,7 @@ src/ft_putendl_fd.o: src/ft_putendl_fd.c.o
 
 # target to build an object file
 src/ft_putendl_fd.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.o
 .PHONY : src/ft_putendl_fd.c.o
 
 src/ft_putendl_fd.i: src/ft_putendl_fd.c.i
@@ -575,7 +575,7 @@ src/ft_putendl_fd.i: src/ft_putendl_fd.c.i
 
 # target to preprocess a source file
 src/ft_putendl_fd.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.i
 .PHONY : src/ft_putendl_fd.c.i
 
 src/ft_putendl_fd.s: src/ft_putendl_fd.c.s
@@ -583,7 +583,7 @@ src/ft_putendl_fd.s: src/ft_putendl_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putendl_fd.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putendl_fd.c.s
 .PHONY : src/ft_putendl_fd.c.s
 
 src/ft_putnbr_fd.o: src/ft_putnbr_fd.c.o
@@ -591,7 +591,7 @@ src/ft_putnbr_fd.o: src/ft_putnbr_fd.c.o
 
 # target to build an object file
 src/ft_putnbr_fd.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.o
 .PHONY : src/ft_putnbr_fd.c.o
 
 src/ft_putnbr_fd.i: src/ft_putnbr_fd.c.i
@@ -599,7 +599,7 @@ src/ft_putnbr_fd.i: src/ft_putnbr_fd.c.i
 
 # target to preprocess a source file
 src/ft_putnbr_fd.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.i
 .PHONY : src/ft_putnbr_fd.c.i
 
 src/ft_putnbr_fd.s: src/ft_putnbr_fd.c.s
@@ -607,7 +607,7 @@ src/ft_putnbr_fd.s: src/ft_putnbr_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putnbr_fd.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putnbr_fd.c.s
 .PHONY : src/ft_putnbr_fd.c.s
 
 src/ft_putstr_fd.o: src/ft_putstr_fd.c.o
@@ -615,7 +615,7 @@ src/ft_putstr_fd.o: src/ft_putstr_fd.c.o
 
 # target to build an object file
 src/ft_putstr_fd.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.o
 .PHONY : src/ft_putstr_fd.c.o
 
 src/ft_putstr_fd.i: src/ft_putstr_fd.c.i
@@ -623,7 +623,7 @@ src/ft_putstr_fd.i: src/ft_putstr_fd.c.i
 
 # target to preprocess a source file
 src/ft_putstr_fd.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.i
 .PHONY : src/ft_putstr_fd.c.i
 
 src/ft_putstr_fd.s: src/ft_putstr_fd.c.s
@@ -631,7 +631,7 @@ src/ft_putstr_fd.s: src/ft_putstr_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putstr_fd.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_putstr_fd.c.s
 .PHONY : src/ft_putstr_fd.c.s
 
 src/ft_realloc.o: src/ft_realloc.c.o
@@ -639,7 +639,7 @@ src/ft_realloc.o: src/ft_realloc.c.o
 
 # target to build an object file
 src/ft_realloc.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.o
 .PHONY : src/ft_realloc.c.o
 
 src/ft_realloc.i: src/ft_realloc.c.i
@@ -647,7 +647,7 @@ src/ft_realloc.i: src/ft_realloc.c.i
 
 # target to preprocess a source file
 src/ft_realloc.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.i
 .PHONY : src/ft_realloc.c.i
 
 src/ft_realloc.s: src/ft_realloc.c.s
@@ -655,7 +655,7 @@ src/ft_realloc.s: src/ft_realloc.c.s
 
 # target to generate assembly for a file
 src/ft_realloc.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_realloc.c.s
 .PHONY : src/ft_realloc.c.s
 
 src/ft_split.o: src/ft_split.c.o
@@ -663,7 +663,7 @@ src/ft_split.o: src/ft_split.c.o
 
 # target to build an object file
 src/ft_split.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.o
 .PHONY : src/ft_split.c.o
 
 src/ft_split.i: src/ft_split.c.i
@@ -671,7 +671,7 @@ src/ft_split.i: src/ft_split.c.i
 
 # target to preprocess a source file
 src/ft_split.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.i
 .PHONY : src/ft_split.c.i
 
 src/ft_split.s: src/ft_split.c.s
@@ -679,7 +679,7 @@ src/ft_split.s: src/ft_split.c.s
 
 # target to generate assembly for a file
 src/ft_split.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_split.c.s
 .PHONY : src/ft_split.c.s
 
 src/ft_splitset.o: src/ft_splitset.c.o
@@ -687,7 +687,7 @@ src/ft_splitset.o: src/ft_splitset.c.o
 
 # target to build an object file
 src/ft_splitset.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.o
 .PHONY : src/ft_splitset.c.o
 
 src/ft_splitset.i: src/ft_splitset.c.i
@@ -695,7 +695,7 @@ src/ft_splitset.i: src/ft_splitset.c.i
 
 # target to preprocess a source file
 src/ft_splitset.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.i
 .PHONY : src/ft_splitset.c.i
 
 src/ft_splitset.s: src/ft_splitset.c.s
@@ -703,7 +703,7 @@ src/ft_splitset.s: src/ft_splitset.c.s
 
 # target to generate assembly for a file
 src/ft_splitset.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_splitset.c.s
 .PHONY : src/ft_splitset.c.s
 
 src/ft_strchr.o: src/ft_strchr.c.o
@@ -711,7 +711,7 @@ src/ft_strchr.o: src/ft_strchr.c.o
 
 # target to build an object file
 src/ft_strchr.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.o
 .PHONY : src/ft_strchr.c.o
 
 src/ft_strchr.i: src/ft_strchr.c.i
@@ -719,7 +719,7 @@ src/ft_strchr.i: src/ft_strchr.c.i
 
 # target to preprocess a source file
 src/ft_strchr.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.i
 .PHONY : src/ft_strchr.c.i
 
 src/ft_strchr.s: src/ft_strchr.c.s
@@ -727,7 +727,7 @@ src/ft_strchr.s: src/ft_strchr.c.s
 
 # target to generate assembly for a file
 src/ft_strchr.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strchr.c.s
 .PHONY : src/ft_strchr.c.s
 
 src/ft_strcpy.o: src/ft_strcpy.c.o
@@ -735,7 +735,7 @@ src/ft_strcpy.o: src/ft_strcpy.c.o
 
 # target to build an object file
 src/ft_strcpy.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.o
 .PHONY : src/ft_strcpy.c.o
 
 src/ft_strcpy.i: src/ft_strcpy.c.i
@@ -743,7 +743,7 @@ src/ft_strcpy.i: src/ft_strcpy.c.i
 
 # target to preprocess a source file
 src/ft_strcpy.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.i
 .PHONY : src/ft_strcpy.c.i
 
 src/ft_strcpy.s: src/ft_strcpy.c.s
@@ -751,7 +751,7 @@ src/ft_strcpy.s: src/ft_strcpy.c.s
 
 # target to generate assembly for a file
 src/ft_strcpy.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strcpy.c.s
 .PHONY : src/ft_strcpy.c.s
 
 src/ft_strdup.o: src/ft_strdup.c.o
@@ -759,7 +759,7 @@ src/ft_strdup.o: src/ft_strdup.c.o
 
 # target to build an object file
 src/ft_strdup.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.o
 .PHONY : src/ft_strdup.c.o
 
 src/ft_strdup.i: src/ft_strdup.c.i
@@ -767,7 +767,7 @@ src/ft_strdup.i: src/ft_strdup.c.i
 
 # target to preprocess a source file
 src/ft_strdup.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.i
 .PHONY : src/ft_strdup.c.i
 
 src/ft_strdup.s: src/ft_strdup.c.s
@@ -775,7 +775,7 @@ src/ft_strdup.s: src/ft_strdup.c.s
 
 # target to generate assembly for a file
 src/ft_strdup.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strdup.c.s
 .PHONY : src/ft_strdup.c.s
 
 src/ft_striteri.o: src/ft_striteri.c.o
@@ -783,7 +783,7 @@ src/ft_striteri.o: src/ft_striteri.c.o
 
 # target to build an object file
 src/ft_striteri.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.o
 .PHONY : src/ft_striteri.c.o
 
 src/ft_striteri.i: src/ft_striteri.c.i
@@ -791,7 +791,7 @@ src/ft_striteri.i: src/ft_striteri.c.i
 
 # target to preprocess a source file
 src/ft_striteri.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.i
 .PHONY : src/ft_striteri.c.i
 
 src/ft_striteri.s: src/ft_striteri.c.s
@@ -799,7 +799,7 @@ src/ft_striteri.s: src/ft_striteri.c.s
 
 # target to generate assembly for a file
 src/ft_striteri.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_striteri.c.s
 .PHONY : src/ft_striteri.c.s
 
 src/ft_strjoin.o: src/ft_strjoin.c.o
@@ -807,7 +807,7 @@ src/ft_strjoin.o: src/ft_strjoin.c.o
 
 # target to build an object file
 src/ft_strjoin.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.o
 .PHONY : src/ft_strjoin.c.o
 
 src/ft_strjoin.i: src/ft_strjoin.c.i
@@ -815,7 +815,7 @@ src/ft_strjoin.i: src/ft_strjoin.c.i
 
 # target to preprocess a source file
 src/ft_strjoin.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.i
 .PHONY : src/ft_strjoin.c.i
 
 src/ft_strjoin.s: src/ft_strjoin.c.s
@@ -823,7 +823,7 @@ src/ft_strjoin.s: src/ft_strjoin.c.s
 
 # target to generate assembly for a file
 src/ft_strjoin.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strjoin.c.s
 .PHONY : src/ft_strjoin.c.s
 
 src/ft_strlcat.o: src/ft_strlcat.c.o
@@ -831,7 +831,7 @@ src/ft_strlcat.o: src/ft_strlcat.c.o
 
 # target to build an object file
 src/ft_strlcat.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.o
 .PHONY : src/ft_strlcat.c.o
 
 src/ft_strlcat.i: src/ft_strlcat.c.i
@@ -839,7 +839,7 @@ src/ft_strlcat.i: src/ft_strlcat.c.i
 
 # target to preprocess a source file
 src/ft_strlcat.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.i
 .PHONY : src/ft_strlcat.c.i
 
 src/ft_strlcat.s: src/ft_strlcat.c.s
@@ -847,7 +847,7 @@ src/ft_strlcat.s: src/ft_strlcat.c.s
 
 # target to generate assembly for a file
 src/ft_strlcat.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcat.c.s
 .PHONY : src/ft_strlcat.c.s
 
 src/ft_strlcpy.o: src/ft_strlcpy.c.o
@@ -855,7 +855,7 @@ src/ft_strlcpy.o: src/ft_strlcpy.c.o
 
 # target to build an object file
 src/ft_strlcpy.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.o
 .PHONY : src/ft_strlcpy.c.o
 
 src/ft_strlcpy.i: src/ft_strlcpy.c.i
@@ -863,7 +863,7 @@ src/ft_strlcpy.i: src/ft_strlcpy.c.i
 
 # target to preprocess a source file
 src/ft_strlcpy.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.i
 .PHONY : src/ft_strlcpy.c.i
 
 src/ft_strlcpy.s: src/ft_strlcpy.c.s
@@ -871,7 +871,7 @@ src/ft_strlcpy.s: src/ft_strlcpy.c.s
 
 # target to generate assembly for a file
 src/ft_strlcpy.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlcpy.c.s
 .PHONY : src/ft_strlcpy.c.s
 
 src/ft_strlen.o: src/ft_strlen.c.o
@@ -879,7 +879,7 @@ src/ft_strlen.o: src/ft_strlen.c.o
 
 # target to build an object file
 src/ft_strlen.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.o
 .PHONY : src/ft_strlen.c.o
 
 src/ft_strlen.i: src/ft_strlen.c.i
@@ -887,7 +887,7 @@ src/ft_strlen.i: src/ft_strlen.c.i
 
 # target to preprocess a source file
 src/ft_strlen.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.i
 .PHONY : src/ft_strlen.c.i
 
 src/ft_strlen.s: src/ft_strlen.c.s
@@ -895,7 +895,7 @@ src/ft_strlen.s: src/ft_strlen.c.s
 
 # target to generate assembly for a file
 src/ft_strlen.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strlen.c.s
 .PHONY : src/ft_strlen.c.s
 
 src/ft_strmapi.o: src/ft_strmapi.c.o
@@ -903,7 +903,7 @@ src/ft_strmapi.o: src/ft_strmapi.c.o
 
 # target to build an object file
 src/ft_strmapi.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.o
 .PHONY : src/ft_strmapi.c.o
 
 src/ft_strmapi.i: src/ft_strmapi.c.i
@@ -911,7 +911,7 @@ src/ft_strmapi.i: src/ft_strmapi.c.i
 
 # target to preprocess a source file
 src/ft_strmapi.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.i
 .PHONY : src/ft_strmapi.c.i
 
 src/ft_strmapi.s: src/ft_strmapi.c.s
@@ -919,7 +919,7 @@ src/ft_strmapi.s: src/ft_strmapi.c.s
 
 # target to generate assembly for a file
 src/ft_strmapi.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strmapi.c.s
 .PHONY : src/ft_strmapi.c.s
 
 src/ft_strncmp.o: src/ft_strncmp.c.o
@@ -927,7 +927,7 @@ src/ft_strncmp.o: src/ft_strncmp.c.o
 
 # target to build an object file
 src/ft_strncmp.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.o
 .PHONY : src/ft_strncmp.c.o
 
 src/ft_strncmp.i: src/ft_strncmp.c.i
@@ -935,7 +935,7 @@ src/ft_strncmp.i: src/ft_strncmp.c.i
 
 # target to preprocess a source file
 src/ft_strncmp.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.i
 .PHONY : src/ft_strncmp.c.i
 
 src/ft_strncmp.s: src/ft_strncmp.c.s
@@ -943,7 +943,7 @@ src/ft_strncmp.s: src/ft_strncmp.c.s
 
 # target to generate assembly for a file
 src/ft_strncmp.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strncmp.c.s
 .PHONY : src/ft_strncmp.c.s
 
 src/ft_strnlen.o: src/ft_strnlen.c.o
@@ -951,7 +951,7 @@ src/ft_strnlen.o: src/ft_strnlen.c.o
 
 # target to build an object file
 src/ft_strnlen.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.o
 .PHONY : src/ft_strnlen.c.o
 
 src/ft_strnlen.i: src/ft_strnlen.c.i
@@ -959,7 +959,7 @@ src/ft_strnlen.i: src/ft_strnlen.c.i
 
 # target to preprocess a source file
 src/ft_strnlen.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.i
 .PHONY : src/ft_strnlen.c.i
 
 src/ft_strnlen.s: src/ft_strnlen.c.s
@@ -967,7 +967,7 @@ src/ft_strnlen.s: src/ft_strnlen.c.s
 
 # target to generate assembly for a file
 src/ft_strnlen.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnlen.c.s
 .PHONY : src/ft_strnlen.c.s
 
 src/ft_strnstr.o: src/ft_strnstr.c.o
@@ -975,7 +975,7 @@ src/ft_strnstr.o: src/ft_strnstr.c.o
 
 # target to build an object file
 src/ft_strnstr.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.o
 .PHONY : src/ft_strnstr.c.o
 
 src/ft_strnstr.i: src/ft_strnstr.c.i
@@ -983,7 +983,7 @@ src/ft_strnstr.i: src/ft_strnstr.c.i
 
 # target to preprocess a source file
 src/ft_strnstr.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.i
 .PHONY : src/ft_strnstr.c.i
 
 src/ft_strnstr.s: src/ft_strnstr.c.s
@@ -991,7 +991,7 @@ src/ft_strnstr.s: src/ft_strnstr.c.s
 
 # target to generate assembly for a file
 src/ft_strnstr.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strnstr.c.s
 .PHONY : src/ft_strnstr.c.s
 
 src/ft_strrchr.o: src/ft_strrchr.c.o
@@ -999,7 +999,7 @@ src/ft_strrchr.o: src/ft_strrchr.c.o
 
 # target to build an object file
 src/ft_strrchr.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.o
 .PHONY : src/ft_strrchr.c.o
 
 src/ft_strrchr.i: src/ft_strrchr.c.i
@@ -1007,7 +1007,7 @@ src/ft_strrchr.i: src/ft_strrchr.c.i
 
 # target to preprocess a source file
 src/ft_strrchr.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.i
 .PHONY : src/ft_strrchr.c.i
 
 src/ft_strrchr.s: src/ft_strrchr.c.s
@@ -1015,7 +1015,7 @@ src/ft_strrchr.s: src/ft_strrchr.c.s
 
 # target to generate assembly for a file
 src/ft_strrchr.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strrchr.c.s
 .PHONY : src/ft_strrchr.c.s
 
 src/ft_strtrim.o: src/ft_strtrim.c.o
@@ -1023,7 +1023,7 @@ src/ft_strtrim.o: src/ft_strtrim.c.o
 
 # target to build an object file
 src/ft_strtrim.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.o
 .PHONY : src/ft_strtrim.c.o
 
 src/ft_strtrim.i: src/ft_strtrim.c.i
@@ -1031,7 +1031,7 @@ src/ft_strtrim.i: src/ft_strtrim.c.i
 
 # target to preprocess a source file
 src/ft_strtrim.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.i
 .PHONY : src/ft_strtrim.c.i
 
 src/ft_strtrim.s: src/ft_strtrim.c.s
@@ -1039,7 +1039,7 @@ src/ft_strtrim.s: src/ft_strtrim.c.s
 
 # target to generate assembly for a file
 src/ft_strtrim.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_strtrim.c.s
 .PHONY : src/ft_strtrim.c.s
 
 src/ft_substr.o: src/ft_substr.c.o
@@ -1047,7 +1047,7 @@ src/ft_substr.o: src/ft_substr.c.o
 
 # target to build an object file
 src/ft_substr.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.o
 .PHONY : src/ft_substr.c.o
 
 src/ft_substr.i: src/ft_substr.c.i
@@ -1055,7 +1055,7 @@ src/ft_substr.i: src/ft_substr.c.i
 
 # target to preprocess a source file
 src/ft_substr.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.i
 .PHONY : src/ft_substr.c.i
 
 src/ft_substr.s: src/ft_substr.c.s
@@ -1063,7 +1063,7 @@ src/ft_substr.s: src/ft_substr.c.s
 
 # target to generate assembly for a file
 src/ft_substr.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_substr.c.s
 .PHONY : src/ft_substr.c.s
 
 src/ft_tolower.o: src/ft_tolower.c.o
@@ -1071,7 +1071,7 @@ src/ft_tolower.o: src/ft_tolower.c.o
 
 # target to build an object file
 src/ft_tolower.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.o
 .PHONY : src/ft_tolower.c.o
 
 src/ft_tolower.i: src/ft_tolower.c.i
@@ -1079,7 +1079,7 @@ src/ft_tolower.i: src/ft_tolower.c.i
 
 # target to preprocess a source file
 src/ft_tolower.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.i
 .PHONY : src/ft_tolower.c.i
 
 src/ft_tolower.s: src/ft_tolower.c.s
@@ -1087,7 +1087,7 @@ src/ft_tolower.s: src/ft_tolower.c.s
 
 # target to generate assembly for a file
 src/ft_tolower.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_tolower.c.s
 .PHONY : src/ft_tolower.c.s
 
 src/ft_toupper.o: src/ft_toupper.c.o
@@ -1095,7 +1095,7 @@ src/ft_toupper.o: src/ft_toupper.c.o
 
 # target to build an object file
 src/ft_toupper.c.o:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.o
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.o
 .PHONY : src/ft_toupper.c.o
 
 src/ft_toupper.i: src/ft_toupper.c.i
@@ -1103,7 +1103,7 @@ src/ft_toupper.i: src/ft_toupper.c.i
 
 # target to preprocess a source file
 src/ft_toupper.c.i:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.i
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.i
 .PHONY : src/ft_toupper.c.i
 
 src/ft_toupper.s: src/ft_toupper.c.s
@@ -1111,7 +1111,7 @@ src/ft_toupper.s: src/ft_toupper.c.s
 
 # target to generate assembly for a file
 src/ft_toupper.c.s:
-	cd /home/anton_beton/Desktop/projects/FDF && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.s
+	cd /home/anton_beton/Desktop/projects/minishell && $(MAKE) $(MAKESILENT) -f Libft/CMakeFiles/ft.dir/build.make Libft/CMakeFiles/ft.dir/src/ft_toupper.c.s
 .PHONY : src/ft_toupper.c.s
 
 # Help Target
@@ -1257,6 +1257,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton_beton/Desktop/projects/FDF && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/anton_beton/Desktop/projects/minishell && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

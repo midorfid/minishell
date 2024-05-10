@@ -2,7 +2,7 @@
 
 void    *null_exit(void *str) {
     if (str == NULL) {
-        perror_exit();
+        perror_exit("minishell", EXIT_FAILURE);
     }
     return (str);
 }

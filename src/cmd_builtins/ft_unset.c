@@ -1,7 +1,7 @@
 #include "../../include/minishell.h"
 #include "../../include/environment.h"
 
-int    ft_unset(char **argv, char **env) {
+int    ft_unset(const char **argv, const char **envp) {
     char **tmp;
     
     tmp = NULL;
